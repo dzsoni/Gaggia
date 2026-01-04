@@ -97,19 +97,19 @@ void oled(float t, float out) {
   if (mode == MODE_STEAM) {
     display.setCursor(0,0);
     display.println("STEAM");
-    display.setCursor(0,10);
+    display.setCursor(0,9);
     display.println(steamReady ? "Habositasra kesz" : "Melegites...");
   } else {
     display.setCursor(0,0);
     display.println("ESPRESSO");
-    display.setCursor(0,10);
+    display.setCursor(0,9);
     display.println("Stabil homerseklet");
   }
 
-  display.setCursor(0,30);
-  display.printf("T: %.1f C\n", t);
-  display.printf("SP: %.1f C\n", setpoint);
-  display.printf("OUT: %.0f %%\n", out);
+  display.setCursor(0,18);
+  display.printf("T:%.1fC SP:%.1fC", t, setpoint);
+  display.setCursor(0,26);
+  display.printf("OUT: %.0f%%", out);
 
   display.display();
 }
